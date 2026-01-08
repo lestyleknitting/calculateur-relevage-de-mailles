@@ -1,4 +1,122 @@
-<!DOCTYPE html>
+.advice {
+            background-color: #efe9db;
+            border-left: 4px solid #af790f;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            color: #000;
+            font-size: 0.9rem;
+        }
+
+        .knit-class-section {
+            background: linear-gradient(135deg, #af790f 0%, #d0aca7 100%);
+            border-radius: 0.75rem;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .knit-class-section h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .knit-class-section p {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .knit-class-link {
+            display: inline-block;
+            background-color: #fff;
+            color: #af790f;
+            padding: 0.875rem 2rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .knit-class-link:hover {
+            background-color: #efe9db;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #d0aca7;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer a {
+            color: #af790f;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover {
+            color: #000;
+        }
+
+        .footer-logo {
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+        }
+
+        .footer-logo img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex: 2;
+            flex-wrap: wrap;
+        }
+
+        .footer-link-button {
+            display: inline-block;
+            background-color: #af790f;
+            color: white;
+            padding: 0.875rem 1.5rem;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-link-button:hover {
+            background-color: #8a5f0a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style><!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -212,7 +330,7 @@
         <!-- En-tête -->
         <div class="header">
             <h1>Calculateur de Relevage</h1>
-            <p>Trouvez le ratio idéal à votre ouvrage pour relever les mailles le long d'une lisière</p>
+            <p>Relever le nombre idéal de mailles le long d'une lisière</p>
         </div>
 
         <!-- Carte principale -->
@@ -248,10 +366,6 @@
                 <p class="motif-info">
                     Les cases <span style="display: inline-block; width: 1rem; height: 1rem; background-color: #af790f; border-radius: 0.25rem; vertical-align: middle;"></span> indiquent où relever une maille
                 </p>
-
-                <div class="warning">
-                    <strong>⚠️ Important :</strong> Ceci est une suggestion de répartition. En tricot, ne sautez pas plus d'une maille d'affilée au risque d'obtenir des trous et un relevage non régulier. Adaptez votre répartition selon votre ouvrage !
-                </div>
             </div>
 
             <div id="emptyState" class="empty-state">
@@ -259,11 +373,25 @@
             </div>
         </div>
 
-        <!-- Conseil final -->
-        <div class="advice">
-            <strong>💡 Conseil :</strong> Faites toujours un test sur quelques centimètres avant de relever sur toute la bordure. Cela vous permet d'ajuster si la tension varie.
+        <!-- Section Knit Class -->
+        <div class="knit-class-section">
+            <h3>Approfondir vos connaissances</h3>
+            <p>Découvrez la Knit Class "Relever des mailles" pour maîtriser toutes les techniques en détail</p>
+            <a href="https://www.lestyleknitting.fr/knit-class/releverdesmailles" class="knit-class-link">Accéder à la Knit Class</a>
         </div>
-    </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-links">
+                <a href="https://www.ravelry.com/designers/le-style-knitting" target="_blank" class="footer-link-button">Designer Ravelry</a>
+            </div>
+            <div class="footer-logo">
+                <img src="https://raw.githubusercontent.com/lestyleknitting/calculateur-relevage/main/logo.png" alt="Le Style Knitting">
+            </div>
+            <div class="footer-links">
+                <a href="https://www.lestyleknitting.fr" target="_blank" class="footer-link-button">Boutique en Ligne</a>
+            </div>
+        </div>
 
     <script>
         // Ratios pratiques utilisés en tricot
